@@ -1,22 +1,23 @@
 import React from "react";
 import Rating from "@mui/material/Rating";
 import "./Product.css";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ show }) => {
   const imageUrl = show.image && show.image.original;
   const truncatedGenres =
     show.genres.join(", ").slice(0, 14) +
     (show.genres.join(", ").length > 14 ? "..." : "");
-  //   const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  //   const handleClick = () => {
-  //     navigate('/details/${show.id}')
-  //   };
+    const handleClick = () => {
+      navigate(`/details/${show.id}`)
+    };
 
   return (
     <div
       className="product-card w-[15rem] transition-all cursor-pointer m-3"
+      onClick={handleClick}
     >
       <div className="h-[20rem]">
         {imageUrl ? (
