@@ -64,7 +64,7 @@ const Footer = () => {
                 <Grid className='pt-20' item xs={12}>
                     <p varient="body2" component='p' align='center'>&copy; 2023 My company. All rights reserved</p>
                     <p varient='body2' component='p' align='center'>Made with love by Me.</p>
-                    <p varient='body2' component='p' align='center'>Icons made by <a href="https://www.freepik.com/" target='_blank'>Freepik</a> from <a href="https://www.flaticon.com/" target='_blank'>www.flaticon.com</a></p>
+                  
                     
                 </Grid>
             </Grid>
