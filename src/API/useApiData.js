@@ -1,4 +1,3 @@
-// useApiData.js
 import { useState, useEffect } from 'react';
 
 const useApiData = () => {
@@ -9,11 +8,9 @@ const useApiData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch data from the API
         const response = await fetch(apiEndpoint);
         const fetchedData = await response.json();
 
-        // Update state with fetched data
         setData(fetchedData);
         setError(null);
       } catch (error) {
@@ -23,11 +20,10 @@ const useApiData = () => {
       }
     };
 
-    // Call the fetchData function
     fetchData();
-  }, []); // Empty dependency array ensures data is fetched only once on mount
+  }, []); 
 
-  // Return the data and error
+  
   return data;
 };
 

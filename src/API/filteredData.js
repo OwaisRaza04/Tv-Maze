@@ -1,4 +1,4 @@
-// useFilteredApiData.js
+
 import { useState, useEffect } from "react";
 import useApiData from "./useApiData";
 
@@ -7,7 +7,6 @@ const useFilteredApiData = (filterId) => {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    // Filter the data based on the provided ID
     const newFilteredData = [];
     filterId = parseInt(filterId);
     allData.forEach((item) => {
@@ -17,7 +16,7 @@ const useFilteredApiData = (filterId) => {
     });
 
     setFilteredData(newFilteredData);
-  }, [allData, filterId]); // Depend on allData and filterId to refetch when they change
+  }, [allData, filterId]); 
   console.log(filteredData);
 
   return filteredData;
